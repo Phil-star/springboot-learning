@@ -1,0 +1,14 @@
+server:
+  port: 80
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://112.124.46.22:3306/j18_db?rewriteBatchedStatements=true&useSSL=false
+    username: root
+    password: 19980123
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:top/philxin/mapper/*.xml
+  type-aliases-package: top.philxin.bean
