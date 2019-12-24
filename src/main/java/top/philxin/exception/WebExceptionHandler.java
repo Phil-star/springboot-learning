@@ -22,4 +22,10 @@ public class WebExceptionHandler {
         logger.error("发生了未知错误",e);
         return DataVo.error(-99, "未知错误，请联系系统管理员");
     }
+
+    @ExceptionHandler
+    public DataVo accountException(AccountException e) {
+        logger.error("账户异常:" + e.getMessage(),e);
+        return DataVo.error(-2,e.getMessage());
+    }
 }

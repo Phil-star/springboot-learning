@@ -1,5 +1,6 @@
 package top;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +15,8 @@ import top.philxin.interceptor.UserInterceptor;
 
 
 @SpringBootApplication
-@EnableWebMvc
 @EnableTransactionManagement
+@MapperScan(basePackages = "top.philxin.mapper")
 //@ComponentScan(basePackages = "top.philxin",
 //        excludeFilters = {@ComponentScan.Filter(type = FilterType.ANNOTATION,value = EnableWebMvc.class)})
 public class Demo1SpringBootApplication {
